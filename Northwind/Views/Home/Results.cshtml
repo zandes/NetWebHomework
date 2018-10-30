@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Results";
+}
+
+<h2>Results</h2>
+
+Thanks for your order, @ViewBag.name. <br />
+We will send your balloons on @ViewBag.birthday.
+<hr />
+Your order will include:
+<ul>
+    @{
+        foreach (var balloon in ViewBag.list)
+        {
+            <li style="color:@balloon">@balloon balloons</li>
+        }
+    }
+</ul>
+<div>
+    @{
+        foreach (string ball in ViewBag.list)
+        {
+            string imagename = "../Content/images/" + ball + ".png";
+            string id = ball + "Img";
+            <img src="@imagename" alt="@ball" id="@id" class="animated bounceInDown"/>
+        }
+    }
+</div>
+
+@section Scripts{
+    <script src="~/Scripts/birthday.js"></script>
+}

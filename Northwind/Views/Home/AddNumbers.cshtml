@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "AddNumbers";
+}
+
+<h2>@ViewBag.Total</h2>
+<form role="form" method="post" action="~/Home/AddNumbers">
+    <div class="form-group">
+        <label for="num1">First number</label>
+        <input type="text" class="form-control" id="num1" name="num1"/>
+    </div>
+    <div class="form-group">
+        <label for="num2">Second number</label>
+        <input type="text" class="form-control" id="num2" name="num2"/>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>

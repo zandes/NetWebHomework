@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Colors";
+}
+
+<h2>Primary Colors</h2>
+
+<form role="form" method="post" action="~/Home/Colors">
+    <div class="form-group">
+        <label for="color1">Select Color 1</label>
+        <select class="form-control" name="color1">
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="color2">Select Color 2</label>
+        <select class="form-control" name="color2">
+            <option value="Red">Red</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+@ViewBag.colorResult
